@@ -1,18 +1,36 @@
 .item {
-    width: 18%;
-    min-width: 200px;
+    width: 30%;
+    min-width: 150px;
     max-width: 300px;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     margin: 0 10px;
+    padding: 10px 0px 10px 0px;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; 
+}
+
+.pop_up {
+    transition-duration: 250ms; 
+  }
+  
+.pop_up:hover,
+.pop_up:active {
+    cursor: pointer;
+    translate: -2px -2px;
 }
 
 .image {
-    width: 200px;
-    height: 200px;
+    width: 75%;
+    height: 75%;
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
     overflow: hidden;
     background-color: var(--color-grey-700);

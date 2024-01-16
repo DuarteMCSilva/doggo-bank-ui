@@ -4,6 +4,25 @@ import classes from './main-navigation.module.css'
 
 
 export default function MainNavigation() {
+
+    const TOPICS = [
+        {
+            title: 'Login',
+            subsections: [],
+            route: '/investiment'
+        },
+        {
+            title: 'Portfolio',
+            subsections: [],
+            route: '/portfolio'
+        },
+        {
+            title: 'Contacts',
+            subsections: [],
+            route: '/contact'
+        },
+    ]
+
     return (
         <header className={classes.header}>
             <nav>
@@ -13,12 +32,15 @@ export default function MainNavigation() {
                     </Link>
                 </div>
                 <ul>
-                    <li> 
-                        <Link href='/posts'> Posts </Link>
-                    </li>
-                    <li> 
-                        <Link href='/contact'> Contact </Link> 
-                    </li>
+                    {
+                        TOPICS.map((topic) =>{
+                            return (
+                                <li>
+                                    <Link href={topic.route}> {topic.title} </Link>
+                                </li>
+                            )
+                        } )
+                    }
                 </ul>
             </nav>
         </header>
